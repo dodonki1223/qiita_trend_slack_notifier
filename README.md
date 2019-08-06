@@ -1,0 +1,1 @@
+# qiita_trend_slack_notifier
