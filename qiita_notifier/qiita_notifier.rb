@@ -5,15 +5,16 @@ require './qiita_notifier/slack_client'
 
 module QiitaNotifier
   class QiitaNotifier
-    attr_reader :web_hook_url, :trend_data, :blocks, :new_blocks
+    attr_reader :web_hook_url, :trend_data, :trend_name, :blocks, :new_blocks
 
     # デフォルトユーザー画像URL
     DEFAULT_USER_IMAGE = 'https://qiita-image-store.s3.amazonaws.com/0/45617/015bd058-7ea0-e6a5-b9cb-36a4fb38e59c.png'
 
     # コンストラクタ
-    def initialize(web_hook_url, trend_data)
+    def initialize(web_hook_url, trend_data, trend_name)
       @web_hook_url = web_hook_url
       @trend_data = trend_data
+      @trend_name = trend_name
       @blocks = create_blocks(trend_data.items)
       @new_blocks = create_blocks(trend_data.new_items)
     end
@@ -66,11 +67,11 @@ module QiitaNotifier
     # 通知するQiitaの時間を取得する
     def notify_article_time
       if Time.now.hour >= 5 && Time.now.hour < 17
-        "#{Date.today.strftime('%Y年%m月%d日')}05時のトレンド"
+        "#{Date.today.strftime('%Y年%m月%d日')}05時の#{@trend_name}のトレンド"
       elsif Time.now.hour >= 17
-        "#{Date.today.strftime('%Y年%m月%d日')}17時のトレンド"
+        "#{Date.today.strftime('%Y年%m月%d日')}17時の#{@trend_name}のトレンド"
       elsif Time.now.hour < 5
-        "#{(Date.today - 1).strftime('%Y年%m月%d日')}17時のトレンド"
+        "#{(Date.today - 1).strftime('%Y年%m月%d日')}17時の#{@trend_name}のトレンド"
       end
     end
 
