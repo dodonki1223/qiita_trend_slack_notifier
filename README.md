@@ -62,20 +62,20 @@ end
 
 ```shell
 # dailyのトレンドをSlackに通知
-$ ruby daily_trend.rb
+$ ruby notify_trend.rb
 
 # dailyのトレンドでNEWのものだけをSlackに通知
-$ ruby daily_new_trend.rb
+$ ruby notify_trend.rb --new
 
 # weeklyのトレンドをSlackに通知
-$ ruby weekly_trend.rb
+$ ruby notify_trend.rb -t weekly
 
 # weeklyのトレンドでNEWのものだけをSlackに通知
-$ ruby weekly_new_trend.rb
+$ ruby notify_trend.rb -t weekly --new
 
 # monthlyのトレンドをSlackに通知
-$ ruby monthly_trend.rb
+$ ruby notify_trend.rb -t monthly
 
 # monthlyのトレンドでNEWのものだけをSlackに通知
-$ ruby monthly_new_trend.rb
+$ ruby notify_trend.rb -t monthly --new
 ```
