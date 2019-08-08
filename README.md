@@ -2,6 +2,8 @@
 
 `qiita_trend`gemを使用したSlack通知用のスクリプトです
 
+![SlackNotifySample](image/slack_notify_sample.png)
+
 ## 使用方法
 
 ### Slackアプリの登録
