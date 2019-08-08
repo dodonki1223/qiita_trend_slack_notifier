@@ -30,7 +30,7 @@ GEM
     parallel (1.17.0)
     parser (2.6.3.0)
       ast (~> 2.4.0)
-    qiita_trend (0.2.3)
+    qiita_trend (0.2.8)
       mechanize
       nokogiri (~> 1.9)
     rainbow (3.0.0)
@@ -52,7 +52,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  qiita_trend (~> 0.2.2)
+  qiita_trend (~> 0.2.8)
   rubocop (~> 0.62)
 
 BUNDLED WITH
