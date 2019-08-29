@@ -24,13 +24,13 @@ GEM
     net-http-digest_auth (1.4.1)
     net-http-persistent (3.1.0)
       connection_pool (~> 2.2)
-    nokogiri (1.10.3)
+    nokogiri (1.10.4)
       mini_portile2 (~> 2.4.0)
     ntlm-http (0.1.1)
     parallel (1.17.0)
     parser (2.6.3.0)
       ast (~> 2.4.0)
-    qiita_trend (0.2.8)
+    qiita_trend (0.3.3)
       mechanize
       nokogiri (~> 1.9)
     rainbow (3.0.0)
@@ -52,7 +52,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  qiita_trend (~> 0.2.8)
+  qiita_trend
   rubocop (~> 0.62)
 
 BUNDLED WITH
