@@ -52,6 +52,7 @@ QiitaNotifier.configure do |config|
   config.password = 'password' 　　　　←　Qiitaにログインするパスワード
   # Slackで作成したアプリのWebHookURLを設定してください
   config.web_hook_url = 'web_hook_url' ←　設定したWebHookURL
+  # config.channel = '' ⇐ channelを任意選択したい場合に設定してください
 end
 
 QiitaTrend.configure do |config|

@@ -70,7 +70,9 @@ module QiitaNotifier
         'payload' => {
           'text' => text,
           'blocks' => blocks
-        }.to_json
+        }.tap do |payload|
+          payload['channel'] = ::QiitaNotifier.configuration.channel unless ::QiitaNotifier.configuration.channel.nil?
+        end.to_json
       }
     end
   end

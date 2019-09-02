@@ -12,12 +12,13 @@ module QiitaNotifier
   end
 
   class Configuration
-    attr_accessor :user_name, :password, :web_hook_url
+    attr_accessor :user_name, :password, :web_hook_url, :channel
 
     def initialize
       @user_name = nil
       @password = nil
       @web_hook_url = nil
+      @channel = nil
     end
   end
 end
