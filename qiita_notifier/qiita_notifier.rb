@@ -5,7 +5,7 @@ require './qiita_notifier/slack_client'
 
 module QiitaNotifier
   class QiitaNotifier
-    attr_reader :web_hook_url, :trend_data, :trend_name, :blocks, :new_blocks
+    attr_reader :web_hook_url, :trend_data, :trend_name, :blocks, :new_blocks, :channel
 
     # デフォルトユーザー画像URL
     DEFAULT_USER_IMAGE = 'https://qiita-image-store.s3.amazonaws.com/0/45617/015bd058-7ea0-e6a5-b9cb-36a4fb38e59c.png'
