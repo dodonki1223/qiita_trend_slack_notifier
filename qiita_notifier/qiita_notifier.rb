@@ -36,7 +36,7 @@ module QiitaNotifier
       blocks = trend_data.each_with_object([]) do |item, result|
         title = SlackBlocks.build_bold_text(SlackBlocks.build_link_text(item['article'], item['title']))
         user_link = SlackBlocks.build_link_text(item['user_page'], item['user_name'])
-        post_date = convert_qiita_post_date(item['created_at'])
+        post_date = convert_qiita_post_date(item['published_at'])
         content = SlackBlocks.build_qiita_content(item['is_new_arrival'], user_link, post_date, item['likes_count'])
 
         text = SlackBlocks.build_qiita(title, content)
