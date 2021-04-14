@@ -23,13 +23,13 @@ class CommandLineArg
       end
 
       # 値を受け取る系のコマンドライン引数を設定する
-      @options[:target] = QiitaTrend::TrendType::DAILY
-      opt.on('-t', '--target [TREND_TARGET]', 'Set trend target(daily, weekly, monthly) default daily') do |v|
-        unless [QiitaTrend::TrendType::DAILY, QiitaTrend::TrendType::WEEKLY, QiitaTrend::TrendType::MONTHLY].include?(v)
-          puts 'トレンドタイプが正しくありません(daily, weekly, monthly)'
+      @options[:target] = QiitaTrend::TrendType::NORMAL
+      opt.on('-t', '--target [TREND_TARGET]', 'Set trend target(normal, personal) default daily') do |v|
+        unless [QiitaTrend::TrendType::NORMAL, QiitaTrend::TrendType::PERSONAL].include?(v)
+          puts 'トレンドタイプが正しくありません(normal, personal)'
           exit
         end
-        set_command_line_arg_value(v, :target, 'トレンドタイプ（daily, weekly, monthly）')
+        set_command_line_arg_value(v, :target, 'トレンドタイプ（normal, personal）')
       end
 
       # true、falseを受け取るコマンドライン引数を設定する

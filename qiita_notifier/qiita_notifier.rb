@@ -16,7 +16,7 @@ module QiitaNotifier
       @trend_data = trend_data
       @trend_name = trend_name
       @blocks = create_blocks(trend_data.items)
-      @new_blocks = create_blocks(trend_data.new_items)
+      @new_blocks = trend_data.new_items.nil? ? nil : create_blocks(trend_data.new_items)
     end
 
     # トレンドをSlackに通知する
@@ -26,7 +26,7 @@ module QiitaNotifier
 
     # NewのもののトレンドをSlackに通知する
     def new_item_notify
-      notify(@new_blocks)
+      notify(@new_blocks) unless @new_blocks.nil?
     end
 
     private
