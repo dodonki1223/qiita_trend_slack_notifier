@@ -38,6 +38,7 @@ GEM
     qiita_trend (0.4.9)
       mechanize (~> 2.7)
       nokogiri (~> 1.10)
+    racc (1.5.2)
     rainbow (3.0.0)
     rexml (3.2.4)
     rubocop (0.82.0)
