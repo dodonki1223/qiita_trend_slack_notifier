@@ -2,5 +2,5 @@
 
 source 'https://rubygems.org'
 
-gem 'qiita_trend', '~>0.4.9'
+gem 'qiita_trend', '~>0.5.0'
 gem 'rubocop', '~> 0.62'
