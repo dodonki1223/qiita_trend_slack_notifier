@@ -70,15 +70,9 @@ $ ruby notify_trend.rb
 # dailyのトレンドでNEWのものだけをSlackに通知
 $ ruby notify_trend.rb --new
 
-# weeklyのトレンドをSlackに通知
-$ ruby notify_trend.rb -t weekly
+# personalのトレンドをSlackに通知
+$ ruby notify_trend.rb -t personal
 
-# weeklyのトレンドでNEWのものだけをSlackに通知
-$ ruby notify_trend.rb -t weekly --new
-
-# monthlyのトレンドをSlackに通知
-$ ruby notify_trend.rb -t monthly
-
-# monthlyのトレンドでNEWのものだけをSlackに通知
-$ ruby notify_trend.rb -t monthly --new
+# personalのトレンドでNEWのものだけをSlackに通知
+$ ruby notify_trend.rb -t personal --new
 ```
